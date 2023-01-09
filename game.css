@@ -1,0 +1,266 @@
+
+body {
+    margin: 0 auto;
+    background-color: rgb(147, 199, 239);
+    display: flex;
+    justify-content: center;
+    background-image: url("https://boomrock.co.nz/wp-content/uploads/2021/03/papanui-station.jpg");
+    opacity: 0.8;
+ }
+
+ .HederFont {
+    font-family: 'Nerko One', cursive;
+    color:#4d3185;
+    font-size: 50px;
+ }
+
+ .game-area {
+    margin:0 auto;
+    text-align: center;
+    padding-top: 20px;
+ }
+  
+ .game-options select, .game-options input  {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-right: 10px;
+ }
+ .game-board {
+    margin-top: 50px;
+    padding: 10px;
+ }
+ .grid-cell {
+    font-size: 40px;
+    padding: 15px 25px;
+    width: 90px;
+    background-color: #FCFCFC;
+ }
+ .green-player {
+    font-size: 50px;
+    padding: 15px 25px;
+    width: 58px;
+    height: 78px;
+    background-color: rgb(12, 4, 132);
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+ }
+ .red-player {
+    font-size: 50px;
+    padding: 15px 25px;
+    width: 58px;
+    height: 78px;
+    background-color: rgb(54, 117, 172);
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+ }
+ 
+ .box {
+    cursor: pointer;
+    border: 4px solid rgb(0, 0, 0);
+    height: 100px;
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .show {
+    display: block;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  .disableDiv {
+    pointer-events:none;
+  }
+
+  .enAbleDiv {
+    pointer-events: block;
+  }
+
+  .containerL1 {
+    display: flex;
+  }
+
+  .containerL2 {
+    display: flex;
+  }
+  
+  .containerL3 {
+    display: flex;
+  }
+  
+  .image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .mainBordC {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .strikeout {
+    font-size: 4em;
+    line-height: 1em;
+    position: relative;
+  }
+  .strikeout::after {
+    background-color: #5c226d;
+    content: "";
+    height: 0.125em;
+    left: 0;
+    margin-top: calc(0.125em / 2 * -1);
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  
+  .strikoutColumn {
+    z-index:10;
+    text-align: center;
+    position: relative;
+  }
+  
+  .strikoutColumn:before {
+    z-index:10;
+    position: absolute;
+    content: "";
+    left: 50%;
+    width: 0;
+    top: 0;
+    height: 100%;
+    border-right: 10px #5c226d solid;
+  }
+  
+  .strikethrough {
+    position: relative;
+  }
+  .strikethrough:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+  
+    transform: rotate(-50deg);
+  }
+  
+  .strikethroughUpSideDown {
+    position: relative;
+  }
+  .strikethroughUpSideDown:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+  
+    transform: rotate(50deg);
+  }
+
+  .ContanerHeadLines {
+    display: flex;
+
+  }
+
+  .textHeadFont {
+    font-size: 26px;
+    color:#4d244d;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .startButton {
+      padding: 0.6em 2em;
+      border: none;
+      outline: none;
+      color: rgb(255, 255, 255);
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      margin-left: 5%;
+    }
+    
+    .startButton:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing-button-85 20s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+    
+    @keyframes glowing-button-85 {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    
+    .startButton:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #222;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+.winLable {
+    font-size: 40px;
+    color:#6a2d85;
+    font-family: 'Caveat', cursive;
+}
+
+.winnersFont {
+ color:#8a4ead;
+ font-family: 'Seymour One', sans-serif;
+}
+
+.winnersSighns {
+  color:#8a4ead;
+  font-family: 'Seymour One', sans-serif;
+  font-size: 22px;
+  font-weight: 330;
+}
